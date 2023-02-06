@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Board
 
   def initialize()
@@ -17,6 +19,26 @@ class Board
   end
 
   def position_taken?(index)
-    @board[index].blank?
+    @board[index] == 'O' || @board[index] == 'X'
+  end
+
+  def valid_move?(index)
+    index.between?(0,8) && !position_taken?(index)
+  end
+
+  def full?
+    @board.none? { |position| position == ' ' }
+  end
+
+  def valid_token?(token)
+    token.upcase == 'X' || token.upcase == 'O'
+  end
+
+  def input_to_index(input)
+    index = input.to_i - 1
+  end
+
+  def input_to_token(input)
+    token = input.upcase
   end
 end
