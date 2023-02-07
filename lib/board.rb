@@ -59,4 +59,8 @@ class Board
   def turn_count
     @board.count { |position| position == 'X' || position == 'O' }
   end
+
+  def clear
+    @board = Array.new(9, ' ')
+  end
 end

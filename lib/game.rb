@@ -37,9 +37,26 @@ class Game
     end
     if @board.won
       puts "Winner is #{@board.winner}!"
+      play_again?
     else
       puts "Cat's Game!"
     end
   end
 
+  def restart
+    @board.clear
+    play
+  end
+
+  def play_again?
+    while true
+      puts 'Would you like to play again? Y or N'
+      input = gets.chomp.upcase
+      if input == 'Y'
+        restart
+      else
+        puts 'Bye for now!'
+      end
+    end
+  end
 end
