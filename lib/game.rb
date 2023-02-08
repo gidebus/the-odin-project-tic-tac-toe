@@ -2,9 +2,10 @@
 require_relative './board.rb'
 
 class Game
-
-  def initialize
-    @board = Board.new
+  attr_accessor :board
+  
+  def initialize(board = Board.new)
+    @board = board
   end
 
   def turn
