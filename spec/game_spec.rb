@@ -2,13 +2,12 @@ require_relative '../lib/game'
 require_relative '../lib/board'
 
 describe Game do
-  let(:game) { Game.new(instance_double_board) }
-  let(:instance_double_board) { instance_double(Board) }
+  let (:board) { Board.new }
+  let(:game) { Game.new(board) }
 
   describe '#initialize' do
-    xit 'initializes an empty board' do
-      # allow(game).to receive(:board).and_return(Array.new(9, ' '))
-      expect(game.board).to eq(Array.new(9,' '))
+    it 'initializes a class with an empty board' do
+      expect(game.board).to eq(board)
     end
   end
 
