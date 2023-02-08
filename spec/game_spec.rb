@@ -10,46 +10,4 @@ describe Game do
       expect(game.board).to eq(board)
     end
   end
-
-  describe '#turn' do
-    xit '' do
-
-    end
-  end
-
-  describe '#current_player' do
-    xit '' do
-
-    end
-  end
-
-  describe '#draw?' do
-    xit '' do
-
-    end
-  end
-
-  describe '#over?' do
-    xit '' do
-
-    end
-  end
-
-  describe '#play' do
-    xit '' do
-
-    end
-  end
-
-  describe '#restart' do
-    xit '' do
-
-    end
-  end
-
-  describe '#play_again?' do
-    xit '' do
-
-    end
-  end
 end
